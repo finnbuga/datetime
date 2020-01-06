@@ -1,6 +1,6 @@
 {
   "name": "flo-datetime",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -24,5 +24,8 @@
   "devDependencies": {
     "@stencil/core": "^1.8.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@ionic/core": "^4.11.7"
+  }
 }

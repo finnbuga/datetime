@@ -10,53 +10,39 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+  interface FloDatetime {
+    'displayFormat': string;
+    'max': string;
+    'min': string;
+    'text': string;
+    'value': string;
   }
 }
 
 declare global {
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLFloDatetimeElement extends Components.FloDatetime, HTMLStencilElement {}
+  var HTMLFloDatetimeElement: {
+    prototype: HTMLFloDatetimeElement;
+    new (): HTMLFloDatetimeElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'flo-datetime': HTMLFloDatetimeElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+  interface FloDatetime {
+    'displayFormat'?: string;
+    'max'?: string;
+    'min'?: string;
+    'text'?: string;
+    'value'?: string;
   }
 
   interface IntrinsicElements {
-    'my-component': MyComponent;
+    'flo-datetime': FloDatetime;
   }
 }
 
@@ -66,7 +52,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
-      'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+      'flo-datetime': LocalJSX.FloDatetime & JSXBase.HTMLAttributes<HTMLFloDatetimeElement>;
     }
   }
 }
