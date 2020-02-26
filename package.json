@@ -1,5 +1,5 @@
 {
-  "name": "flo-datetime",
+  "name": "stencil-datetime",
   "version": "0.0.9",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
